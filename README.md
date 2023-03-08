@@ -1,10 +1,10 @@
 # leatlet.canvas.marker
 # 继承自CircleMarker
 
-
-#### 示例加载1000个点
-```
-for (let i = 0; i < 1000; i++) {
+## usage
+#### demo for add 10000 points
+```javascript
+for (let i = 0; i < 10000; i++) {
   const p = latLng(29 + Math.random() * 2, 106 + Math.random() * 2);
   new CanvasMarker(p, {
     icon: {
@@ -16,14 +16,14 @@ for (let i = 0; i < 1000; i++) {
         color: 'rgb(229, 230, 3)',
         bgColor: 'rgba(55, 71, 72, 0.8)',
         fontSize: 16,
-        text: " 我是标签" + i,
+        text: "i am label " + i,
       },
   }).addTo(this.map).on('click', (e) => {
     console.log(e.target);
   });
 }
 ```
-
+## 功能
 ### 自定义图标ico
 - url 设置图标路径
 - size 设置图标大小
